@@ -23,30 +23,30 @@
 // --------- arrays
 console.log([]);
 console.log([1,2,3,4]);
-console.log([1,'2',true,1234]);
-console.log(typeof []);
+console.log([1,'2',true,[]]);
+console.log([1,2] === [1,2]);
 
-// --------- Zero Based
+// --------- Zero Based
 // const varArray = [1,'2',true,1234]
 // console.log(varArray);
-// console.log(varArray[2]);
+// console.log(varArray[0]);
 // console.log(varArray.length);
 
 // --------- Update 
-// const arr1 = [1, 2, 3, 4]
+// const arr1 = [1,2,3,4]
 // arr1[2] = 'rabbit';
 // // arr1[arr1.length] = 5;
-// // arr1[10] = 9
+// arr1[10] = 9
 
 // console.log(arr1);
 // console.log(arr1.length);
 
 // --------- Method push & unshift
-// const arr1 = [1, 2, 3, 4]
+// const arr1 = [1,2,3,4]
 // arr1.push(5);
-// // arr1.pop();
-// // arr1.shift();
-// // arr1.unshift(0);
+// arr1.pop();
+// arr1.shift();
+// arr1.unshift(0);
 
 // console.log(arr1);
 
@@ -56,8 +56,8 @@ console.log(typeof []);
 // console.log(varArray.indexOf('element'));
 // console.log(varArray.find((a)=> a > 5)); // This is a little complicated as it has a callback
 
-// --------- Nested Arrays
-// let arr2 = [
+// --------- Nested Arrays
+// const arr2 = [
 // 	[1, 2],
 // 	['a', 'b'],
 // 	[100, 200],
@@ -66,7 +66,7 @@ console.log(typeof []);
 // console.log(arr2[1][1]);
 
 // --------- Set with const
-// const arr1 = [1, 2, 3, 4]
+// const arr1 = [1,2,3,4]
 // arr1[2] = 'Hello';
 // console.log(arr1.length);
 
@@ -76,21 +76,21 @@ console.log(typeof []);
 // Demo - 3 - Objects
 /*
 // --------- Object
-const obj1 = {
-	fistName: 'Foo',
-	lastName: 'Bar',
-};
+// const obj1 = {
+// 	fistName: 'Foo',
+// 	lastName: 'Bar',
+// };
 
-// Selector Brackets
-console.log(obj1['lastName']);
-// Selector Dot Notation
-console.log(obj1.lastName);
+// // Selector Brackets
+// console.log(obj1['lastName']);
+// // Selector Dot Notation
+// console.log(obj1.lastName);
 
 // --------- Working with objects
 // const obj1 = {
 // 	fistName: 'Foo',
 // 	lastName: 'Bar',
-//   age: 21
+//     age: 21
 // };
 
 // // select
@@ -113,17 +113,17 @@ console.log(obj1.lastName);
 
 // arr.push(
 // 	{
-// 		fistName: 'Foo',
+// 		firstName: 'Foo',
 // 		lastName: 'Bar',
 // 	},
 // 	{
-// 		fistName: 'Julie',
+// 		firstName: 'Julie',
 // 		lastName: 'Jones',
 // 	},
 // 	[1, 2]
 // );
 
-// console.log(arr[1].fistName);
+// console.log(arr[1].firstName);
 
 // --------- Objects of arrays
 // const obj = {}
@@ -139,84 +139,84 @@ console.log(obj1.lastName);
 
 // Demo - 4 - Loops
 /*
-// ==== basic loop ==== \\
-for (let i = 0; i <= 10; i++) {
-    console.log(`this is i = ${i}`);
-}
-
-// ==== infinate loop -- VERY BAD!!! ==== \\
-// for (let i = 11; i > 10; i++) {
-//     console.log(`this is i = ${i}`);
+// ==== basic loop ==== \\
+// for (let i = 0; i <= 10; i++) {
+//     console.log(`this is i = ${1 + 1}`);
 // }
 
-// ==== Iterate through an array ==== \\
-// Iterate over Array Loop (Remember to use array length - 1)
-// const array1 = [1, 2, 3, 4, 5];
-// for (let i = 0; i < array1.length; i++) {
-//     console.log(`array position = ${i} contains ${array1[i]}`);
+// ==== infinate loop -- VERY BAD!!! ==== \\
+// for (let i = 1; i > 10; i++) {
+//     console.log(`this is i = ${i}`);
 // }
 
-// ==== Nest Loops ==== \\
-// const array1 = [1, 2, 3, 4, 5];
-// for (let i = 0; i < array1.length; i++) {
-//     console.log(`array position = ${i} contains ${array1[i]}`);
-//     for (let j = 0; j <= 3; j++) {
-//         console.log(`this is j = ${j}`);
-//     }
+// ==== Iterate through an array ==== \\
+// Iterate over Array Loop (Remember to use array length - 1)
+// const array1 = [1, 2, 3, 4, 5];
+// for (let i = 0; i < array1.length; i++) {
+//     console.log(`array position = ${i} contains ${array1[i]}`);
 // }
 
-// ==== while loop ==== \\
-// while loop + Break Key word
-// // Example 1
-// let i = 0
-// while (i < 10) {
-//     console.log(i)
-//     i++
+// ==== Nest Loops ==== \\
+// const array1 = [1, 2, 3, 4, 5];
+// for (let i = 0; i < array1.length; i++) {
+//     console.log(`array position = ${i} contains ${array1[i]}`);
+//     for (let j = 0; j < 3; j++) {
+//         console.log(`this is j = ${j}`);
+//     }
 // }
 
-// // Example 2
-// const guessWord = 'hello';
-// let guess = prompt('Please enter your guess');
-// while (guess != guessWord) {
-//     guess = prompt('Please enter your guess');
+// ==== while loop ==== \\
+// while loop + Break Key word
+// Example 1
+// let i = 0
+// while (i <= 10) {
+//     console.log(i)
+//     i++
 // }
-// console.log('you have guessed correctly');
 
-// ==== Array Loop 'For Of' ==== \\
-// Example using for loop
-// let exampleArray = [
-//     [1, 2, 3],
-//     ['a', 'b', 'c'],
-//     [true, false, null],
+// // Example 2
+// const guessWord = 'hello';
+// let guess = prompt('Please enter your guess');
+// while (guess != guessWord) {
+//     guess = prompt('Please enter your guess');
+// }
+// console.log('you have guessed correctly');
+
+// ==== Array Loop 'For Of' ==== \\
+// Example using for loop
+// let exampleArray = [
+//     [1, 2, 3],
+//     ['a', 'b', 'c'],
+//     [true, false, null],
 // ];
 
-// // console.log(exampleArray);
-// for (let i = 0; i < exampleArray.length; i++) {
-//     const row = exampleArray[i];
-//     for (let j = 0; j < row.length; j++) {
-//         console.log(row[j]);
-//     }
+// console.log(exampleArray);
+// for (let i = 0; i < exampleArray.length; i++) {
+//     const row = exampleArray[i];
+//     for (let j = 0; j < row.length; j++) {
+//         console.log(row[j]);
+//     }
 // }
 
-// // same but written with for of loop
-// for (let i of exampleArray) {
-//     for (let j of i) {
-//         console.log(j);
-//     }
+// same but written with for of loop
+// for (let i of exampleArray) {
+//     for (let j of i) {
+//         console.log(j);
+//     }
 // }
 
-// ==== object loop using 'for in' ==== \\
-// Iterate over object literal (for in loop or Object.values or Object.keys)
-// const classHairColour = {
-//     Justin: 'Used to be brown',
-//     Ben: 'unconfirmed',
-//     Vicky: 'Chestnut',
-//     Tish: 'Black',
-//     Robyn: 'Blonde',
+// ==== object loop using 'for in' ==== \\
+// Iterate over object literal (for in loop or Object.values or Object.keys)
+// const classHairColour = {
+//     Justin: 'Used to be brown',
+//     Ben: 'unconfirmed',
+//     Vicky: 'Chestnut',
+//     Tish: 'Black',
+//     Robyn: 'Blonde',
 // };
 
-// for (let i in classHairColour) {
-//     console.log(`${i} hair colour = ${classHairColour[i]}`);
+// for (let i in classHairColour) {
+//     console.log(`${i} hair colour = ${classHairColour[i]}`);
 // }
 
 // if have time could come array 'map' & 'forEach' though this is not common now
