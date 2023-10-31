@@ -77,7 +77,7 @@ console.log([1,2] === [1,2]);
 /*
 // --------- Object
 // const obj1 = {
-// 	fistName: 'Foo',
+// 	firstname: 'Foo',
 // 	lastName: 'Bar',
 // };
 
@@ -88,13 +88,13 @@ console.log([1,2] === [1,2]);
 
 // --------- Working with objects
 // const obj1 = {
-// 	fistName: 'Foo',
+// 	firstname: 'Foo',
 // 	lastName: 'Bar',
 //     age: 21
 // };
 
 // // select
-// console.log(obj1.fistName);
+// console.log(obj1.firstname);
 
 // // Update
 // obj1.age = 31
